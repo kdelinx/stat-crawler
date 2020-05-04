@@ -11,8 +11,7 @@ from scrapy.loader.processors import MapCompose, Join
 class RusprofileItem(scrapy.Item):
     id = scrapy.Field()
     title = scrapy.Field(
-        input_processor=MapCompose(),
-        output_processor=Join(),
+        input_processor=MapCompose(), output_processor=Join(),
     )
     is_active_organization = scrapy.Field()
     ogrn = scrapy.Field()

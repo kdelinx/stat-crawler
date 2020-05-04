@@ -1,0 +1,23 @@
+version: 3.7
+
+services:
+  statistics_crawler:
+    image: vimagick/scrapyd
+    env_file:
+      - scrapy.env
+    links:
+      - kafka
+    container_name: statistics_crawler
+    networks:
+      - statistics_network: {}
+    depends_on:
+      - kafka
+    ports:
+      - 127.0.0.1:6800:6800
+    restart: always
+
+
+networks:
+  statistics_network:
+    external: true
+    name: system
