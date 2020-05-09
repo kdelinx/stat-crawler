@@ -1,14 +1,13 @@
 from scrapy.spiders import CrawlSpider
 
-from requester import Requester
+from .requester import Requester
 
 
 class BaseSpider(CrawlSpider):
     name = None
 
-    def __init__(self, spider, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         super().__init__(*args, *kwargs)
-        self.spider = spider
         self.params = self.get_params(**kwargs)
         self.request_limit = self.get_request_limit()
         self.requester = Requester(self.request_limit)

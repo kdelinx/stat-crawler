@@ -17,14 +17,14 @@ class StatisticsPipeline:
     def _get_kafka_servers(spider):
         return [
             f'{server}:9092' for server in
-            spider.crawler.settings.get('KAFKA_HOSTS')
+            spider.crawler.settings.getlist('KAFKA_HOSTS')
         ]
 
     def open_spider(self, spider):
         self.producer = KafkaProducer(
             client_id=self.client_id,
             bootstrap_servers=self._get_kafka_servers(spider),
-            value_serializer=lambda msg: json.dumps(msg).encode('ascii')
+            value_serializer=lambda msg: json.dumps(msg).encode('utf-98')
         )
 
     def process_item(self, item, spider):
