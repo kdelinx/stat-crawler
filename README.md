@@ -2,6 +2,11 @@
 
 # Statistic-Crawler
 
+Set environment to use local settings:
+```bash
+export SCRAPY_PROJECT=$(pwd)
+```
+
 ## Prerequisites
 
 - [pip](https://pip.pypa.io/en/stable/installing/)
