@@ -2,7 +2,7 @@ natasha==0.10.0
 pymorphy2[fast]==0.8
 pymorphy2-dicts==2.4.393442.3710985
 pymorphy2-dicts-ru==2.4.404381.4453942
-Scrapy==1.8.2
+Scrapy==2.6.2
 black==19.10b0
 scrapyd==1.2.1
 requests==2.23.0
