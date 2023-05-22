@@ -5,6 +5,6 @@ pymorphy2-dicts-ru==2.4.404381.4453942
 Scrapy==1.8.2
 black==19.10b0
 scrapyd==1.2.1
-requests==2.23.0
+requests==2.31.0
 kafka-python==2.0.1
 aiohttp~=3.6.2
